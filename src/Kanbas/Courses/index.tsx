@@ -4,20 +4,20 @@ import Modules from "./Modules";
 import Home from "./Home";
 import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/Editor";
+import Grades from "./Grades";
 
 
 export default function Courses() {
     return (
       <div id="wd-courses">
-        <h2>Course 1234</h2>
+        <h2 className="text-danger">Course 1234</h2>
         <hr/>
 
-        <table width="100%">
-            <tr>
-                <td valign="top">
+        <div className="d-flex">
+    <div className="d-none d-md-block">
                     <CoursesNavigation />
-                </td>
-                <td valign="top">
+                    </div>
+            <div className="flex-fill">        
             <Routes>
             <Route path="/"
                      element={<Navigate to="Home" />} />
@@ -28,11 +28,11 @@ export default function Courses() {
               <Route path="/Assignments" element={<Assignments/>} />
               <Route path="Assignments/:id" element={<AssignmentEditor />} />
               <Route path="/Quizzes" element={<h1>Quizzes</h1>} />
-              <Route path="/Grades" element={<h1>Grades</h1>} />
+              <Route path="/Grades" element={<h1><Grades /></h1>} />
             </Routes>
-          </td>
-            </tr>
-        </table>
+            </div>
+  </div>
+          
       </div>
   );}
   

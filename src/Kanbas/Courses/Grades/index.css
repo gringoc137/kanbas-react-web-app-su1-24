@@ -1,0 +1,33 @@
+.table{
+    font-size: 14px;
+  border: 1px solid lightgray;
+  border-radius: 3px;
+  
+}
+.table-responsive{
+    margin-top: 20px;
+}
+thead{
+    th{
+        font-weight: 600;
+        background-color: lightgray;
+        font-size: 16px !important;
+    }
+    .lil{
+        font-size: 13px !important;
+    }
+}
+tbody{
+    th { color: Red !important; }
+}
+
+
+.btn{
+    background-color: #f5f5f5 !important;
+    width: auto;
+    height: 35px;
+    font-size: 15px;
+    text-align: center;
+    border-radius: 3px;
+    border: 1px solid lightgrey;
+}
