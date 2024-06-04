@@ -1,17 +1,26 @@
+import React, { useState } from 'react';
 import AssignmentControls from "./AssignmentControls";
 import { BsGripVertical } from "react-icons/bs";
 import { IoEllipsisVertical } from "react-icons/io5";
 import { FaPlus, FaCheckCircle, FaEllipsisV, FaBook } from "react-icons/fa";
+import { FaTrash } from "react-icons/fa";
 import { IoMdArrowDropdown } from "react-icons/io";
 import GreenCheckmark from "./GreenCheckmark";
 import { PiNotePencilBold } from "react-icons/pi";
 import { Link, useParams } from "react-router-dom";
 import { assignments } from "../../Database";
+import { useSelector, useDispatch } from "react-redux";
+import {
+  addAssignment,
+  deleteAssignment,
+  updateAssignment,
+  setAssignment,
+} from "./reducer";
 
 export default function Assignments() {
   const { cid } = useParams();
   const assignmentList = assignments.filter(
-    (assignment) => assignment.course === cid);
+    (assignment) => assignment.course === cid); 
   console.log(cid);
 
   return (
@@ -89,6 +98,7 @@ export default function Assignments() {
                   <p className="assignent-sub-text"> <span className="red-text">Multiple Modules</span>  | <span className="bold"> Not available until </span> May 6 at 12:00 AM | Due May 13 at 11:59 PM | 100pts </p>
                 </div>
                   <div className = "assignment-list-right-icons">
+                    <FaTrash className="text-danger" />
                     <FaCheckCircle className="text-success" />
                     <IoEllipsisVertical className="three-dot-icon fs-4" />
                   </div>
