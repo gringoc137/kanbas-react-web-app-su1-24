@@ -1,3 +1,4 @@
+import Acme from "./Acme";
 import EnvironmentVariables from "./EnvironmentVariables";
 import HttpClient from "./HttpClient";
 import PathParameters from "./PathParameters";
@@ -25,6 +26,7 @@ export default function Lab5() {
         <HttpClient />
         <WorkingWithObjectsAsynchronously />
         <WorkingWithArraysAsynchronously />
+        <Acme />
       </div>
     );
   }
