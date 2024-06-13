@@ -16,6 +16,7 @@ import {
   updateAssignment,
   setAssignment,
 } from "./reducer";
+import * as client from './client'
 
 export default function Assignments() {
   const { cid } = useParams();

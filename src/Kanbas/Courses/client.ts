@@ -8,8 +8,8 @@ export const createCourse = async (course: any) => {
 };
 
 export const fetchAllCourses = async () => {
-    const { data } = await axios.get(COURSES_API);
-    return data;
+    const response = await axios.get(COURSES_API);
+    return response.data;
 };
 
 
