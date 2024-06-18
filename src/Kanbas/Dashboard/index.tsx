@@ -37,7 +37,7 @@ export default function Dashboard({ courses, course, setCourse, addNewCourse,
             <div className="wd-dashboard-course col" style={{ width: "300px" }}>
               <Link to={`/Kanbas/Courses/${course._id}/Home`} className="text-decoration-none" >
                 <div className="card rounded-3 overflow-hidden">
-                  <img src={`/images/${course.image}`} className="card-img-top"
+                  <img src="/images/rocketPropulsion.png" className="card-img-top"
                     style={{ height: 150 }} />
                   <div className="card-body">
                     <span className="wd-dashboard-course-link"
